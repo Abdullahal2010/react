@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #444;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background-color: #222;
+  color: white;
+  font-family: arial;
+  padding: 25px 15px;
+  border: 3px solid rgb(60, 60, 60);
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px -1px orange;
+}
+
+form div {
+  padding: 8px;
+  font-size: 1.1rem;
+}
+
+form div input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 4px;
+  margin-top: 5px;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+
+.error {
+  color: rgb(255, 90, 90);
+  margin-top: -7px;
+}
+
+form div input.invalid {
+  border: 2px solid red;
+  animation: myanim 0.3s cubic-bezier(1, 0.05, 0.5, 1.46);
+}
+
+form div button {
+  border: 2px solid orange;
+  background-color: white;
+  padding: 3px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+form div button:hover {
+  background-color: orange;
+}
+
+@keyframes myanim {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
